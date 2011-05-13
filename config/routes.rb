@@ -1,4 +1,8 @@
 Blog::Application.routes.draw do
+  resources :articles
+
+  root :to => "articles#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -56,3 +60,4 @@ Blog::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
 end
+
